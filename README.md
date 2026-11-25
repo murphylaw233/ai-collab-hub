@@ -1,3 +1,5 @@
+> **English** | [简体中文](README.zh-CN.md)
+
 # AI Collab Hub
 
 Local collaboration bridge that connects **Antigravity** (Desktop & Remote Control PWA) and **Gemini App** (Web & Mobile via Custom Connected Apps) to **OpenAI Codex** (`codex app-server`), with shared SQLite state, guarded project file access, real-time monitoring, and human-only L2 approvals.
@@ -69,7 +71,7 @@ Antigravity users are configured automatically by `npm run setup:local`. Other M
 
 ## Connect Gemini App (Remote MCP + OAuth 2.1)
 
-See the step-by-step guides (currently in Chinese):
+See the step-by-step guides:
 - [docs/gemini-app-setup.md](docs/gemini-app-setup.md) — Tailscale Funnel (`3790` only), `config/hub.json` `"remote"` settings, OAuth 2.1 authorization, and `/api/oauth/revoke-all` emergency revocation.
 - [docs/gemini-gem-prompt.md](docs/gemini-gem-prompt.md) — Recommended Gemini Gem instructions for delegating research/execution to local Codex.
 - [DESIGN.md](DESIGN.md) — Architecture and design notes.
