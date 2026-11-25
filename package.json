@@ -1,0 +1,34 @@
+{
+  "name": "ai-collab-hub",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "description": "Unified local collaboration bridge for Antigravity, Gemini App, and OpenAI Codex on native Windows.",
+  "scripts": {
+    "setup:local": "node scripts/setup-local.mjs",
+    "start": "node --import tsx src/index.ts",
+    "start:dist": "node dist/src/index.js",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "node --import tsx --test test/*.test.ts",
+    "probe:codex": "node scripts/phase0-codex-probe.mjs",
+    "probe:codex:live": "node scripts/phase0-codex-probe.mjs --live-turn",
+    "probe:codex:ws": "node scripts/phase1-ws-probe.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@openai/codex": "^0.172.0",
+    "ws": "^8.23.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/ws": "^8.18.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

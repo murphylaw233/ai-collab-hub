@@ -1,0 +1,46 @@
+{
+  "host": "127.0.0.1",
+  "port": 3789,
+  "dbPath": "data/hub.sqlite",
+  "codex": {
+    "transport": "ws",
+    "wsPort": 0,
+    "defaultApprovalPolicy": "on-request",
+    "defaultSandbox": "workspace-write",
+    "ephemeralThreads": false
+  },
+  "guardrails": {
+    "idempotencyCooldownMs": 60000,
+    "maxTaskDurationMs": 600000,
+    "maxFollowupTurns": 6,
+    "maxConsecutiveErrors": 3,
+    "maxCommandOutputBytes": 65536,
+    "deltaFlushIntervalMs": 100
+  },
+  "remote": {
+    "enabled": false,
+    "host": "127.0.0.1",
+    "port": 3790,
+    "publicBaseUrl": "https://your-machine.tailnet.ts.net",
+    "allowRemoteDocsWrite": false,
+    "maxStateLength": 16384
+  },
+  "projects": [
+    {
+      "id": "demo-readonly",
+      "name": "Demo Read-Only Repo",
+      "rootPath": "D:/Projects/example-readonly",
+      "permissionMode": "read_only",
+      "docsSubdir": "docs",
+      "description": "Read-only inspection and research target"
+    },
+    {
+      "id": "demo-active-app",
+      "name": "Demo Active App",
+      "rootPath": "D:/Projects/example-app",
+      "permissionMode": "codex_work",
+      "docsSubdir": "docs",
+      "description": "Allows Codex edits/tests and docs writing"
+    }
+  ]
+}

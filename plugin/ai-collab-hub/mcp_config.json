@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ai-collab-hub": {
+      "url": "http://127.0.0.1:3789/mcp/local",
+      "headers": {
+        "Authorization": "Bearer REPLACE_WITH_YOUR_HUB_LOCAL_TOKEN"
+      }
+    }
+  }
+}
